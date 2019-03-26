@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">My Favorite Movies</string>
+    <string name="button_addmovie">Add Movie</string>
+    <string name="button_edit">Edit</string>
+    <string name="button_delete">Delete Movie</string>
+    <string name="button_showlistbyyear">Show list by year</string>
+    <string name="button_showlistbyrating">Show list by rating</string>
+    <string name="addMovieActivity">Add Movie</string>
+    <string name="nameEditText">Name</string>
+    <string name="descriptionLabel">Description:</string>
+    <string name="genreLabel">Genre:</string>
+    <string name="ratingLabel">Rating:</string>
+    <string name="yearEditText">Year</string>
+    <string name="imdbEditText">IMDB</string>
+    <string name="addMovieButton">Add Movie</string>
+    <string name="editMovieActivity">Edit Movie</string>
+    <string name="percentage"></string>
+    <string name="description"></string>
+    <string name="savechanges">Save Changes</string>
+    <string name="titlename">Movies by Year</string>
+    <string name="movietitle">Title:</string>
+    <string name="descriptionmov">Description:</string>
+    <string name="nulll"></string>
+    <string name="genree">Genre:</string>
+    <string name="rating1">Rating:</string>
+    <string name="year1">Year:</string>
+    <string name="imdb">IMDB:</string>
+    <string name="finish">Finish</string>
+    <string name="imgprev">Previous</string>
+    <string name="imgfirst">First</string>
+    <string name="imgNext">Next</string>
+    <string name="imgLast">Last</string>
+    <string name="titlerating">Movies by Rating</string>
+    <string-array name="movieGenreList">
+        <item><font fgcolor="#D3D3D3">Select</font></item>
+        <item>Action</item>
+        <item>Animation</item>
+        <item>Comedy</item>
+        <item>Documentary</item>
+        <item>Family</item>
+        <item>Horror</item>
+        <item>Crime</item>
+        <item>Others</item>
+    </string-array>
+
+</resources>
