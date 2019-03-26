@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/weightLabelId"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/weight_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/weightValueId"
+        android:layout_width="134dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_text"
+        android:inputType="numberDecimal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/saveButtonId"
+        app:layout_constraintEnd_toStartOf="@+id/genderTextViewId"
+        app:layout_constraintStart_toEndOf="@+id/weightLabelId"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432" />
+
+    <Button
+        android:id="@+id/saveButtonId"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/button_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightLabelId" />
+
+    <TextView
+        android:id="@+id/genderTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Gender"
+        app:layout_constraintBottom_toTopOf="@+id/saveButtonId"
+        app:layout_constraintEnd_toStartOf="@+id/genderSwitchId"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/genderSwitchId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:showText="true"
+        android:textOff="@string/f"
+        android:textOn="@string/m"
+        app:layout_constraintBottom_toTopOf="@+id/saveButtonId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/drinkSizeId"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/drink_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveButtonId" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupId"
+        android:layout_width="289dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@+id/drinkSizeId"
+        app:layout_constraintTop_toBottomOf="@+id/saveButtonId">
+
+        <RadioButton
+            android:id="@+id/radioButton1ozId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/drink_rbutton"
+            android:textSize="12sp"
+
+            />
+
+        <RadioButton
+            android:id="@+id/radioButton5ozId"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/drink_rbutton2"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton12ozid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/drink_rbutton3" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/alcoholLabelId"
+        android:layout_width="67dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/alcohol"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupId" />
+
+    <SeekBar
+        android:id="@+id/alcoholSeekBarId"
+        android:layout_width="218dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:progress="5"
+        android:max="26"
+        app:layout_constraintEnd_toStartOf="@+id/alcoholValueId"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/alcoholLabelId"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupId" />
+
+    <TextView
+        android:id="@+id/alcoholValueId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textViewAlcoholIndicator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupId" />
+
+    <Button
+        android:id="@+id/addDrinkButtonId"
+        android:layout_width="167dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/adddrink_button"
+        app:layout_constraintEnd_toStartOf="@+id/resetButtonId"
+        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alcoholSeekBarId" />
+
+    <Button
+        android:id="@+id/resetButtonId"
+        android:layout_width="171dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/reset_button"
+        app:layout_constraintBottom_toTopOf="@+id/bacLevelId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alcoholSeekBarId" />
+
+    <TextView
+        android:id="@+id/bacLevelId"
+        android:layout_width="184dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/textViewBacLevel"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addDrinkButtonId" />
+
+    <ProgressBar
+        android:id="@+id/progressBarId"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="341dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bacLevelId" />
+
+    <TextView
+        android:id="@+id/yourStatusId"
+        android:layout_width="154dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textView_status"
+        android:textAlignment="viewEnd"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/yourStatusValueId"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarId"
+        tools:text="@string/textView_status" />
+
+    <TextView
+        android:id="@+id/yourStatusValueId"
+        android:layout_width="153dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textView_comment"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/yourStatusId"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarId"
+        app:layout_constraintVertical_bias="0.509" />
+
+    <TextView
+        android:id="@+id/bacLevelResultId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/bacLevelResult"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintStart_toEndOf="@+id/bacLevelId"
+        app:layout_constraintTop_toBottomOf="@+id/resetButtonId"
+        app:layout_constraintVertical_bias="0.454" />
+
+
+</android.support.constraint.ConstraintLayout>
